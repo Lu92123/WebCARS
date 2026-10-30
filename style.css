@@ -1,3 +1,9 @@
+:root{
+    --red:#d93b3a;
+    --orange:#eb793d;
+    --black:#2b2622;
+}
+
 *{
     margin: 0;
 }
@@ -29,9 +35,10 @@ nav ul li{
     display: flex;
 }
 .title{
-    width: 100%;
-    height: 6vh;
     display: flex;
+    justify-content: center;
+    align-items: top;
+    gap: 20%;
 }
 .title img{
     width: 100%;
@@ -40,4 +47,49 @@ nav ul li{
 .bg{
     z-index: -1;
     display: flex;
+    position: absolute;
 }
+.bg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+}
+
+/* INDEX
+ */
+
+.main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 1rem;
+}
+.Resumen{
+    width: 100%;
+    height: auto;
+    margin: 3vh;
+    padding: 1rem;
+    background-color: var(--red);
+}
+.Datos{
+    width: 100%;
+    height: auto;
+    margin: 3vh;
+    padding: 1rem;
+    background-color: var(--orange);
+}
+.Películas{
+    width: 100%;
+    height: auto;
+    margin: 3vh;
+    padding: 1rem;
+    background-color: var(--red);
+}
+.Personajes{
+    width: 100%;
+    height: auto;
+    margin: 3vh;
+    padding: 1rem;
+    background-color: var(--orange);
+ }
