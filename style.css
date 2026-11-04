@@ -2,13 +2,17 @@
     --red:#d93b3a;
     --orange:#eb793d;
     --black:#2b2622;
+    --radius: 10px;
+    --size: 26px;
 }
-
 *{
     margin: 0;
+    scroll-behavior: smooth;
 }
 body{
-
+    font-family:Roboto, sans-serif ;
+    background: var(--black);
+    justify-content: center;
 }
 
 header{
@@ -23,6 +27,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
+    background: var(--black);
 }
 nav ul{
     width: 100%;
@@ -33,16 +38,38 @@ nav ul li{
     width: 100%;
     height: 100%;
     display: flex;
+
 }
+nav a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    border-radius: var(--radius);
+    transition: ease 0.3s;
+}
+nav li:nth-child(4n + 1) a:hover { background-color: var(--red); }
+nav li:nth-child(4n + 2) a:hover { background-color: var(--orange); }
+nav li:nth-child(4n + 3) a:hover { background-color: var(--red); }
+nav li:nth-child(4n + 4) a:hover { background-color: var(--orange); }
+nav li:nth-child(4n + 5) a:hover { background-color: var(--red); }
+
 .title{
     display: flex;
-    justify-content: center;
-    align-items: top;
     gap: 20%;
+    width: 50%;
+    position: relative;
+    justify-content: left;
 }
 .title img{
-    width: 100%;
-    height: 200px;
+    width: auto;
+    height: 600px;
+    margin-left: 50px;
+    object-fit: cover;
 }
 .bg{
     z-index: -1;
@@ -55,7 +82,9 @@ nav ul li{
     object-fit: cover;
     display: flex;
 }
-
+.spacer{
+    margin: 275px;
+}
 /* INDEX
  */
 
@@ -63,33 +92,146 @@ nav ul li{
     width: 100%;
     height: auto;
     display: flex;
-    gap: 1rem;
+    color: var(--black);
+    overflow:scroll;
+    scrollbar-width: none;
+    align-items: center;
+    justify-content: left;
 }
+
 .Resumen{
     width: 100%;
     height: auto;
-    margin: 3vh;
+    margin: 1vh;
     padding: 1rem;
+    border-radius:var(--radius);
     background-color: var(--red);
+    transition: ease 0.3s;
+    align-items: center;
+    justify-content: center;
+}
+
+.Resumen:hover{
+    padding: 1.5rem;
 }
 .Datos{
     width: 100%;
     height: auto;
-    margin: 3vh;
+    margin: 1vh;
     padding: 1rem;
+    border-radius:var(--radius);
     background-color: var(--orange);
+    transition: ease 0.3s;
+}
+.Datos:hover{
+    padding: 1.5rem;
 }
 .Películas{
     width: 100%;
     height: auto;
-    margin: 3vh;
+    margin: 1vh;
     padding: 1rem;
+    border-radius: var(--radius);
     background-color: var(--red);
+    transition: ease 0.3s;
+}
+.Películas:hover{
+    padding: 1.5rem;
 }
 .Personajes{
     width: 100%;
     height: auto;
-    margin: 3vh;
+    margin: 1vh;
     padding: 1rem;
+    border-radius: var(--radius);
     background-color: var(--orange);
+    transition: ease 0.3s;
  }
+.Personajes:hover{
+    padding: 1.5rem;
+}
+.boton{
+    width: auto;
+    height: auto;
+    padding: 2rem;
+    border-radius: var(--radius);
+    background-color: var(--black);
+    color: var(--red);
+    transition: ease 0.3s;
+    display: flex;
+    text-decoration: none;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--size);
+
+}
+.boton:hover{
+    background-color: rgb(43 38 34 / 0.85);
+
+}
+.boton a{
+    text-decoration: none;
+    color: white;
+}
+.image img{
+    margin-top: 20px;
+    width: 400px;
+    height: auto;
+    border-image: var(--radius);
+    border-radius: var(--radius);
+
+}
+.arrows{
+    justify-content: center;
+    position: absolute;
+    display: flex;
+    gap: 80%;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+.arrow1{
+    cursor: pointer;
+}
+
+.arrow2{
+    cursor: pointer;
+}
+.arrow1 img{
+    width: 150px;
+    height: 100%;
+    rotate: 90deg;
+    opacity: 0.7;
+    transition: ease 0.3s;
+}
+.arrow1 img:hover{
+    opacity: 1;
+    width: 160px;
+
+}
+.arrow2 img{
+    width: 150px;
+    height: 100%;
+    rotate: -90deg;
+    opacity: 0.7;
+    transition: ease 0.3s;
+}
+.arrow2 img:hover{
+    opacity: 1;
+    width: 160px;
+}
+footer{
+    width: 100%;
+    height: auto;
+    margin-top: 100px;
+    margin-bottom: 10px;
+    border-radius: var(--radius);
+    background-color: var(--black);
+    color: wheat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
