@@ -97,7 +97,7 @@ nav li:nth-child(4n + 5) a:hover { background-color: var(--red); }
 .svg-resumen:hover{
     -webkit-mask-image: url('IMG/logos/book-fill.svg');
     mask-image: url('IMG/logos/book-fill.svg');
-    padding: 22px;
+    padding: 20px;
 }
 .svg-datos{
     background-color: #fff;
@@ -115,7 +115,7 @@ nav li:nth-child(4n + 5) a:hover { background-color: var(--red); }
 .svg-datos:hover{
     -webkit-mask-image: url('IMG/logos/star-fill.svg');
     mask-image: url('IMG/logos/star-fill.svg');
-    padding: 22px;
+    padding: 20px;
 }
 
 .svg-peliculas{
@@ -134,12 +134,12 @@ nav li:nth-child(4n + 5) a:hover { background-color: var(--red); }
 .svg-peliculas:hover{
     -webkit-mask-image: url('IMG/logos/camera-reels-fill.svg');
     mask-image: url('IMG/logos/camera-reels-fill.svg');
-    padding: 22px;
+    padding: 20px;
 }
 .svg-personajes{
     background-color: #fff;
-    -webkit-mask-image: url('IMG/logos/');
-    mask-image: url('IMG/logos/');
+    -webkit-mask-image: url('IMG/logos/person.svg');
+    mask-image: url('IMG/logos/person.svg');
     -webkit-mask-size: contain;
     mask-size: contain;
     -webkit-mask-repeat: no-repeat;
@@ -150,9 +150,9 @@ nav li:nth-child(4n + 5) a:hover { background-color: var(--red); }
     justify-content: center;
 }
 .svg-personajes:hover{
-    -webkit-mask-image: url('IMG/logos/');
-    mask-image: url('IMG/logos/');
-    padding: 22px;
+    -webkit-mask-image: url('IMG/logos/person.svg');
+    mask-image: url('IMG/logos/person.svg');
+    padding: 20px;
 }
 .title{
     display: flex;
@@ -242,7 +242,7 @@ nav li:nth-child(4n + 5) a:hover { background-color: var(--red); }
     border-radius: var(--radius);
     background-color: var(--orange);
     transition: ease 0.3s;
- }
+}
 .Personajes:hover{
     padding: 1.5rem;
 }
@@ -331,30 +331,3 @@ footer{
     justify-content: center;
     text-align: center;
 }
-
-.imagefondo img{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    z-index: -1;
-    position: absolute;
-    opacity: 0.5;
-    overflow: hidden;
-}
-
-
-.info {
-    position: center;
-    color: white;
-    display: flex;
-    justify-content: center;
-    margin-top: 300px;
-    font-size: 50px;
-
-}
-
-
-
-
-
-
