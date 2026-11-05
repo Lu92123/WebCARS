@@ -13,6 +13,7 @@ body{
     font-family:Roboto, sans-serif ;
     background: var(--black);
     justify-content: center;
+    scroll-behavior: smooth;
 }
 
 header{
@@ -23,18 +24,25 @@ header{
 
 nav{
     width: 100%;
-    height: auto;
+    height: 5vh;
+    margin-bottom: 15px;
+    margin-top: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
     background: var(--black);
+    transition: ease 0.3s;
+    overflow: hidden;
+}
+nav:hover{
+    height: 11vh;
+    overflow: hidden;
 }
 nav ul{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 nav ul li{
     width: 100%;
@@ -45,7 +53,7 @@ nav ul li{
 
 }
 nav a {
-    width: 100%;
+    width: auto;
     height: 100%;
     display: flex;
     align-items: center;
@@ -53,7 +61,6 @@ nav a {
     text-decoration: none;
     color: white;
     padding: 20px;
-    border-radius: var(--radius);
     transition: ease 0.3s;
 }
 
@@ -67,9 +74,7 @@ nav li:nth-child(4n + 5) a:hover { background-color: var(--red); }
     background-color: #fff;
     -webkit-mask-image: url('IMG/logos/house.svg');
     mask-image: url('IMG/logos/house.svg');
-    -webkit-mask-size: contain;
     mask-size: contain;
-    -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     padding: 17px;
     margin-top: 5px;
@@ -79,15 +84,13 @@ nav li:nth-child(4n + 5) a:hover { background-color: var(--red); }
 .svg-inicio:hover{
     -webkit-mask-image: url('IMG/logos/house-fill.svg');
     mask-image: url('IMG/logos/house-fill.svg');
-    padding: 20px;
+    padding: 25px;
 }
 .svg-resumen{
     background-color: #fff;
     -webkit-mask-image: url('IMG/logos/book.svg');
     mask-image: url('IMG/logos/book.svg');
-    -webkit-mask-size: contain;
     mask-size: contain;
-    -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     padding: 17px;
     margin-top: 5px;
@@ -97,15 +100,13 @@ nav li:nth-child(4n + 5) a:hover { background-color: var(--red); }
 .svg-resumen:hover{
     -webkit-mask-image: url('IMG/logos/book-fill.svg');
     mask-image: url('IMG/logos/book-fill.svg');
-    padding: 20px;
+    padding: 25px;
 }
 .svg-datos{
     background-color: #fff;
     -webkit-mask-image: url('IMG/logos/star.svg');
     mask-image: url('IMG/logos/star.svg');
-    -webkit-mask-size: contain;
     mask-size: contain;
-    -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     padding: 17px;
     margin-top: 5px;
@@ -115,16 +116,14 @@ nav li:nth-child(4n + 5) a:hover { background-color: var(--red); }
 .svg-datos:hover{
     -webkit-mask-image: url('IMG/logos/star-fill.svg');
     mask-image: url('IMG/logos/star-fill.svg');
-    padding: 20px;
+    padding: 25px;
 }
 
 .svg-peliculas{
     background-color: #fff;
     -webkit-mask-image: url('IMG/logos/camera-reels.svg');
     mask-image: url('IMG/logos/camera-reels.svg');
-    -webkit-mask-size: contain;
     mask-size: contain;
-    -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     padding: 17px;
     margin-top: 5px;
@@ -134,15 +133,13 @@ nav li:nth-child(4n + 5) a:hover { background-color: var(--red); }
 .svg-peliculas:hover{
     -webkit-mask-image: url('IMG/logos/camera-reels-fill.svg');
     mask-image: url('IMG/logos/camera-reels-fill.svg');
-    padding: 20px;
+    padding: 25px;
 }
 .svg-personajes{
     background-color: #fff;
     -webkit-mask-image: url('IMG/logos/person.svg');
     mask-image: url('IMG/logos/person.svg');
-    -webkit-mask-size: contain;
     mask-size: contain;
-    -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     padding: 17px;
     margin-top: 5px;
@@ -150,9 +147,9 @@ nav li:nth-child(4n + 5) a:hover { background-color: var(--red); }
     justify-content: center;
 }
 .svg-personajes:hover{
-    -webkit-mask-image: url('IMG/logos/person.svg');
-    mask-image: url('IMG/logos/person.svg');
-    padding: 20px;
+    -webkit-mask-image: url('IMG/logos/person-fill.svg');
+    mask-image: url('IMG/logos/person-fill.svg');
+    padding: 25px;
 }
 .title{
     display: flex;
@@ -194,17 +191,28 @@ nav li:nth-child(4n + 5) a:hover { background-color: var(--red); }
     align-items: center;
     justify-content: left;
 }
-
+.spacerG{
+    width: auto;
+    height: 700px;
+    /* Height controla la posición en la que
+    va a quedar la pantalla al hacer click
+    en las flechas
+    */
+    margin: 1vh;
+    padding: 1rem;
+    /* Con margin y padding se controla
+    que tan grande es el spacer
+     */
+    visibility: hidden;
+}
 .Resumen{
     width: 100%;
     height: auto;
     margin: 1vh;
     padding: 1rem;
-    border-radius:var(--radius);
+    border-radius: var(--radius);
     background-color: var(--red);
     transition: ease 0.3s;
-    align-items: center;
-    justify-content: center;
 }
 
 .Resumen:hover{
@@ -263,8 +271,7 @@ nav li:nth-child(4n + 5) a:hover { background-color: var(--red); }
 
 }
 .boton:hover{
-    background-color: rgb(43 38 34 / 0.85);
-
+    background-color: royalblue;
 }
 .boton a{
     text-decoration: none;
@@ -330,4 +337,40 @@ footer{
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+
+
+/*
+PERSONAJES:
+ */
+.personajes{
+    width: 100%;
+    height: auto;
+    display: block;
+    color: white;
+    overflow:scroll;
+    scrollbar-width: none;
+    align-items: center;
+    justify-content: left;
+}
+.personajes h1{
+    margin: 20px;
+}
+.rayo{
+    width: 100%;
+    height: auto;
+
+    gap: 2vh;
+    border-radius: var(--radius);
+    background-color: var(--red);
+    transition: ease 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items:baseline;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+.info{
+    display: flex;
 }
