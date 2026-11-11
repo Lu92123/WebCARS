@@ -390,3 +390,150 @@ PERSONAJES:
     text-align: center;
     overflow: hidden;
 }
+
+.imagefondo {
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    margin-top: 5px;
+    opacity: 0.5;
+    z-index: -999999;
+    animation: chicarimagen linear both;
+    animation-timeline: scroll();
+    animation-range: 0% 30%;
+}
+
+.imagenesfondo img {
+    width: 100%;
+    height: 200;
+    object-fit: cover;
+    display: flex;
+    z-index: -999999;
+    opacity: 1;
+    animation: chicarimagen linear both;
+    animation-timeline: scroll();
+    animation-range: 0% 40%;
+}
+
+@keyframes chicarimagen {
+    from {
+        margin-bottom: 0px;
+    }
+    to {
+        margin-bottom: -1500px;
+}
+}
+
+.informacionDelaPagina {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 600px;
+    left: 50%;
+     animation: moverConScroll linear both;
+     animation-timeline: scroll();
+    animation-range: 0% 20%;
+}
+
+@keyframes moverConScroll {
+  from {
+    opacity: 1;
+    transform: translateX(-450px) translateY(-200px)
+     
+    
+    
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-1500PX) translateY(-200px)
+    
+  }
+}
+
+.informacionDelaPagina h1 {
+    color: white;
+    font-size: 10rem;
+    margin: 20px;
+}
+
+
+.container1{
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cars1 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    color: white;
+    overflow:scroll;
+    scrollbar-width: none;
+    align-items: center;
+    justify-content: left;
+    gap: 20px;
+}
+.cars1 img {
+    margin-top: 20px;
+    margin-left: 25px;
+    width: 700px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.cars1 h2 {
+    color: white;
+    font-size: 10rem;
+    margin: 20px;
+}
+
+.cars1 p {
+    color: white;
+    font-size: 2rem;
+    margin: 20px;
+}
+.cars2 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    color: white;
+    overflow:scroll;
+    scrollbar-width: none;
+    align-items: center;
+    justify-content: left;
+    gap: 20px;
+}
+.cars2 img {
+    margin-top: 20px;
+    margin-left: 25px;
+    width: 700px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;    
+}
+
+.cars2 h2 {
+    color: white;
+    font-size: 10rem;
+    margin: 20px;
+    align-items: right;
+    justify-content: right;
+}
+
+.cars2 p {
+    color: white;
+    font-size: 2rem;
+    margin: 20px;
+    align-items: right;
+    justify-content: right;
+}
+
+.cars2 {
+    align-items: right; 
+    justify-content: right;
+    display: flex;
+}
